@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Szamologep</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h2>Számológép</h2>
+        </div>
+        
+        <div class="datas">
+            <input type="number" name="a" id="a" placeholder="a">
+            <br>
+            <input type="number" name="b" id="b" placeholder="b">
+        </div>
+
+        <div class="operations">
+            <button onclick="plus()">+</button>
+            <button onclick="minus()">-</button>
+            <button onclick="multiplication()">*</button>
+            <button onclick="division()">/</button>
+        </div>
+
+        <div class="result">
+            <h4>Eredmény:</h4>
+            <div id="result"></div>
+        </div>
+    </div>
+    
+
+    <script>
+        function plus() {
+            let a = parseInt(document.getElementById("a").value)
+            let b = parseInt(document.getElementById("b").value)
+
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("result").innerHTML = "Helytelen adatok. Próbáld újra"
+            }
+            else{
+                document.getElementById("result").innerHTML =
+                `${a} + ${b} = ${a + b}`
+            }
+        }
+
+        function minus() {
+            let a = parseInt(document.getElementById("a").value)
+            let b = parseInt(document.getElementById("b").value)
+
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("result").innerHTML = "Helytelen adatok. Próbáld újra"
+            }
+            else{
+                document.getElementById("result").innerHTML =
+                `${a} - ${b} = ${a - b}`
+            }
+        }
+
+        function multiplication() {
+
+            let a = parseInt(document.getElementById("a").value)
+            let b = parseInt(document.getElementById("b").value)
+
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("result").innerHTML = "Helytelen adatok. Próbáld újra"
+            }
+            else{
+                document.getElementById("result").innerHTML =
+                `${a} * ${b} = ${a * b}`
+            }       
+        }
+
+        function division() {
+
+            let a = parseInt(document.getElementById("a").value)
+            let b = parseInt(document.getElementById("b").value)
+
+            if (isNaN(a) || isNaN(b)) {
+                document.getElementById("result").innerHTML = "Helytelen adatok. Próbáld újra"
+            }
+            else{
+                document.getElementById("result").innerHTML =
+                `${a} / ${b} = ${a / b}`
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
